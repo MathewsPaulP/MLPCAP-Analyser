@@ -21,3 +21,17 @@ The main aim of this project is to create a python malware detection framework t
 3.	Develop malware detection framework on the above platform and achieve over 70% solution accuracy on the Qbot dataset.
 4.	Compare the various machine learning classifiers and find the most accurate classifier.
 5.	Test the above algorithm on a PCAP containing multiple malware packets to determine solution effectiveness in detecting Qbot packets.
+
+
+# Approach
+
+The idea behind this project is to create a supervised machine learning solution that learns from an infected PCAP and identifies threats in an unseen PCAP. As such the first step is to find PCAP datasets containing malware traffic data. After researching on industry practices, the malware-traffic-analysis.net blog was chosen. This blog contains malware network traffic from 2013 onwards in PCAP format. Each PCAP also comes with a file containing all Indicators of Compromise (IoC). These IoC’s are artefacts identified by computer forensic expert from the cybersecurity industry. Using these datasets and IoC’s, the infection PCAP is processed using Wireshark. The PCAP is divided into normal and Qbot packets. The detailed report on how the packets were analysed can be found in the Approach chapter.
+
+After thorough research, python based Jupter notebook was chosen as IDE for the framework development. Python was chosen for its diverse range of machine learning libraries and vast amount of previous work done on the subject. Jupyter notebook provided a powerful and versatile IDE that allowed for the code, its output and explanatory text to be displayed as a single interactive webpage like interface. The outputs to a cell of code could be seen below it hence allowing for sections of code to be run independently without needing to compile the whole program. This allows for module like development of the 
+
+The program was created using the libraries scapy, pandas, scikit-learn(sklearn), pickle and graphviz. The detailed usage of these libraries is explained in the Design and Implementation chapters of this report. Code from other repositories was also used to implement functions quickly, these repositories are referenced in the Design chapter.
+
+Finally, the script was tested on Qbot datasets and the performance of the different algorithms were calculated using various metrics from sklearn. The detailed report of these tests is available in the testing and evaluation chapter.
+
+*The full detailed report is available on request
+
