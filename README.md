@@ -4,3 +4,20 @@ Novel Python framework deploying machine learning algorithms for detecting malic
 This script takes in a pcap file that has been processed using wireshark identifying the malicious data packets. The pcap file is converted to binary for faster processing and ran through ml algorithms from sci-kit learn. The original infected pcap dataset and related files were obtained from https://www.malware-traffic-analysis.net/ .
 
 
+# Abstract
+Packet capture (jargon PCAP) is the most common API used for capturing and analysing network traffic. Traditionally a packet analyser software such as Wireshark is used to capture and analyse packets of data for malware threats. The exponential growth of the internet has made this task excruciatingly time consuming and resource heavy. However, with the advancements in the field of Artificial Intelligence, the initial classification of network packets can be accomplished with the help of machine learning. Different studies have already demonstrated the efficiency and effectiveness of these algorithms compared to signature-based solutions in detecting malware threats.
+
+This report details how such a system can be built using python and compares the different machine learning algorithms effectiveness in detecting Qakbot variants. The python script was developed in Jupyter notebook using Scapy, Pandas, Sklearn and pickle libraries. The script was then tested on pre-processed data sets from malware-traffic-analysis.net. Once the script was done calibrating, different machine learning classifiers were tested for accuracy, run-time, precision, recall and f-measure metrics.
+
+Initial experimental results have shown Random Forest Classifier to be the most effective with an average accuracy of 98%. KNN, SVM and Decision Tree classifiers also achieved high accuracies while Logistic Regression and Neural network classifiers had the lowest average detection accuracies.
+
+
+# Aims and Objectives
+
+The main aim of this project is to create a python malware detection framework that can detect Qbot packets in a PCAP and to find the most effective Machine Learning classifier. To create such a system the following objectives were set.
+	
+1.	Conduct robust research on Qbot and find effective method to isolate infection traffic in PCAP.
+2.	Research and find the most appropriate machine learning platform and learn the various dependencies required for the project.
+3.	Develop malware detection framework on the above platform and achieve over 70% solution accuracy on the Qbot dataset.
+4.	Compare the various machine learning classifiers and find the most accurate classifier.
+5.	Test the above algorithm on a PCAP containing multiple malware packets to determine solution effectiveness in detecting Qbot packets.
